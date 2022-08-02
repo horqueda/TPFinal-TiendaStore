@@ -1,0 +1,12 @@
+.carousel{
+    max-width: 1500px;
+    max-height: 500px;
+    padding: 1rem;
+    margin: 0 auto;
+    color: white;
+    background-color: #9e9394;
+    padding-top: 1em;
+    position: relative;
+    bottom: 10%;
+    width: 100%;
+}

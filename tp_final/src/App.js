@@ -1,24 +1,23 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Banner from './Banner';
 import Footer from './Footer';
 import NavBar from './NavBar';
 import ProductsList from './ProductsList';
+import Producto from './Product';
 import { Container } from 'react-bootstrap';
-import {BrowserRouter, Route, Routes, useParams} from 'react-router-dom'
-import { useState } from 'react';
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
-function App() {
-  const {categories} = useParams();
-  const [producto, setProducto] = useState()
-  
+function App() {    
   return (
     <Container>
       <BrowserRouter>
         <NavBar></NavBar>
         <Routes>
-          <Route path='/' element={<h1>Aca vamos a poner un banner</h1>}/>
-          <Route path='/categories/:catId' element={<ProductsList id={categories} ></ProductsList>}/>
-        </Routes>
+          <Route path='/' element={<Banner></Banner>}/>
+          <Route path='/categories/:catId' element={<ProductsList></ProductsList>}/>
+          <Route path='/categories/:catId/:productoId' element={<Producto></Producto>}/>
+         </Routes>
         <Footer></Footer>
       </BrowserRouter>
     </Container>

@@ -1,19 +1,30 @@
 import './NavBar.css'
-import  {Container, Nav, Navbar } from 'react-bootstrap'
+import  {Container, Navbar } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+
 
 function NavBar(){
     return(
-      <Container>
-        <Navbar bg="dark" variant="dark">
-        <Link style={{textDecoration: 'none', marginRight:'10Rem' }} to="/categories/1">Remeras</Link>
-        <Link style={{textDecoration: 'none', marginRight:'10Rem' }} to="/categories/2">Chombas</Link>
-        <Link style={{textDecoration: 'none', marginRight:'10Rem' }} to="/categories/catId:3">Camisas</Link>
-        <Link style={{textDecoration: 'none', marginRight:'10Rem' }} to="/categories/catId:4">Otros</Link>
-        <Link style={{textDecoration: 'none', marginRight:'10Rem' }} to="/">HOME</Link>
+        <Navbar gb="" variant="">
+        <Container>
+          <Navbar.Brand>
+            <Link style={{textDecoration: 'none', color: 'blue'}} to="/">
+              <img
+                alt="logo"
+                src="logo.png"
+                width="2000"
+                height="30"
+                className="d-inline-block align-top"
+              />{' '}
+            T S
+            </Link>
+          </Navbar.Brand>
+          <Link style={{textDecoration: 'none', marginRight:'10Rem' }} to="/">HOME</Link>   
+          <Link style={{textDecoration: 'none', marginRight:'10Rem' }} to="/categories/1">Remeras</Link>
+          <Link style={{textDecoration: 'none', marginRight:'10Rem' }} to="/categories/2">Camperas</Link>
+          <Link style={{textDecoration: 'none', marginRight:'10Rem' }} to="/categories/3">Zapatillas</Link>
+        </Container>
       </Navbar>
-      </Container>
     )
 }
-
 export default NavBar
